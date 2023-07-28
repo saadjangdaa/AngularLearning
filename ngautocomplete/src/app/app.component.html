@@ -1,0 +1,35 @@
+<!-- <input type="text" [(ngModel)]="somevalue"/>
+<input type="button" value="click" (click)="clickfunction()"/>
+<b>{{ somevalue }}</b>
+{{1+1}}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                SomeValue
+            </th>   
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of somevalues">
+            <td>
+                {{temp}}
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<app-autocomplete></app-autocomplete> -->
+<div class="row">
+	<div class="col-xl-4" style="position: relative; left: 33%;margin-top: 2%">
+		<alert type="info" *ngIf="car">
+		  Your Selected Car: <strong>{{car}}</strong>
+		</alert>
+	</div>
+	<div class="col-xl-12" style="margin-top: 5%;">
+		<app-autocomplete (setcarNameEvent)="setCarName($event)"></app-autocomplete>
+	</div>
+</div>
